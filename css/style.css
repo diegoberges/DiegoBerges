@@ -1,0 +1,79 @@
+body{
+	padding-top: 80px;
+	text-align: justify;
+	font: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.bottom{margin-bottom: 50px;}
+.navbar .nav > li > a {
+	font: 300 16px/40px "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.btn-custom{
+	background-color: #333333;
+	color: #ffffff;
+}
+.btn-custom:hover{
+	background-color: #0CA0CE;
+	color: #ffffff;
+}
+.footer{
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+}
+/************************************/
+/*! Index */
+/************************************/
+
+.box > .icon { text-align: center; position: relative; font: 300 16px/40px "Open Sans", Helvetica, Arial, sans-serif;}
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #333333; vertical-align: middle; }
+.box > .icon:hover > .image { background: #0CA0CE; }
+.box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
+.box > .icon:hover > .image > i { color: white !important; }
+.box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0;}
+.box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
+.box > .icon > .info > h3.title {font-size: 16px; color: #222; font-weight: 500; }
+.box > .icon > .info > p { font-size: 13px; color: #666; line-height: 1.5em; margin: 20px; text-align: justify; }
+.box > .icon > .info > .more a { font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
+.box > .icon:hover > .info > .more > a { padding: 6px 8px; font-weight: bold; }
+.box .space { height: 30px; }
+
+.index{ margin: 40px 0 60px; }
+
+/************************************/
+/*! Portfolio */
+/************************************/
+
+.text-center{ text-align: center; }
+.divider{
+	border-bottom: 1px solid #E7E7E7;
+	border-top: 1px solid #E7E7E7;
+	height: 4px;
+	margin: 50px 0 60px;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+.divider h2{
+	background: none repeat scroll 0 0 #ffffff;
+	color: #333333;
+	display: inline-block;
+	font-size: 26px;
+	left: 50%;
+	margin-left: -100px;
+	margin-top: -18px;
+	position: absolute;
+	text-align: center;
+	width: 200px;
+}
+
+h2 {
+	line-height: 35px;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/************************************/
+/*! Contact */
+/************************************/
+.contact-p{ margin: 50px 0 60px; }
+.contact-f button{ margin: 20px 0 170px; }

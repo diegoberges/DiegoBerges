@@ -1,0 +1,11 @@
+#itsbootstrapcookie {
+	background-color:#5A5A5A;
+	position:fixed;
+	z-index:9999;
+	width:100%;
+	top:0;
+	padding:15px;
+	height:auto;
+	color:#fff;
+	display:none
+}
