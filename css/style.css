@@ -1,8 +1,12 @@
-body{
-	padding-top: 120px;
-	text-align: justify;
-	font: "Open Sans", Helvetica, Arial, sans-serif;
+@font-face{
+    font-family: 'Fira Code';
+    src: 
+         url('../fonts/FiraCode-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
 }
-.navbar .nav > li > a {
-	font: 300 16px/40px "Open Sans", Helvetica, Arial, sans-serif;
+body{
+	padding-top: 60px;
+	text-align: justify;
+	font-family: 'Fira Code', monospace;
 }
