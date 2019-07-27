@@ -2,28 +2,28 @@
 
 @font-face{
     font-family: 'Fira Code';
-    src: url('../fonts/FiraCode-Light.woff') format('woff');
+    src: url('../webfonts/FiraCode/FiraCode-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Fira Code';
-    src: url('../fonts/FiraCode-Regular.woff') format('woff');
+    src: url('../webfonts/FiraCode/FiraCode-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Fira Code';
-    src: url('../fonts/FiraCode-Medium.woff') format('woff');
+    src: url('../webfonts/FiraCode/FiraCode-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face{
     font-family: 'Fira Code';
-    src: url('../fonts/FiraCode-Bold.woff') format('woff');
+    src: url('../webfonts/FiraCode/FiraCode-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
@@ -66,4 +66,12 @@ body{
     font-size: 21px;
     font-weight: 200;
     line-height: 1.4;
+}
+
+.social {
+    padding-top: 20px;
+}
+.social > a > i {
+    font-size: 35px;
+    color: #000;
 }
