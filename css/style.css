@@ -1,3 +1,5 @@
+ /* Fuentes personalizadas */
+
 @font-face{
     font-family: 'Fira Code';
     src: url('../fonts/FiraCode-Light.woff') format('woff');
@@ -25,8 +27,47 @@
     font-weight: 700;
     font-style: normal;
 }
+
+/* CSS Grid */
+
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * { 
+    position: relative;
+}
+
+.grid-container *:after { 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-areas: "[descripcion]";
+}
+
+
+@media all and (-ms-high-contrast:none) {
+    .grid-container {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr 6fr 1fr;
+        -ms-grid-rows: 1fr 6fr 1fr;
+    }
+}
+
+/* CSS de los diferentes componentes*/
+
 body{
-	padding-top: 60px;
 	text-align: justify;
-	font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', monospace;
+}
+
+.lead {
+    margin-bottom: 20px;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 1.4;
 }
