@@ -63,10 +63,6 @@ html, body, .grid-container { height: 100%; margin: 0; }
 body{
 	text-align: justify;
     font-family: 'Fira Code', monospace;
-}
-
-.lead {
-    margin-bottom: 20px;
     font-size: 21px;
     font-weight: 200;
     line-height: 1.4;
