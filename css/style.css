@@ -71,7 +71,7 @@ body{
 .social {
     padding-top: 20px;
 }
-.social > a > i {
+.social > a > em {
     font-size: 35px;
     color: #000;
 }
