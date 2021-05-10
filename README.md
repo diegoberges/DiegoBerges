@@ -1,5 +1,19 @@
-### Hi there 👋 I'm [Diego Berges](https://diegoberges.com)
-> Software Analyst [Grupo Oesia](https://grupooesia.com)
+```js
+import SoftwareDeveloper from 'diegoberges';
+
+class Bio extends SoftwareDeveloper {
+  name     = 'Diego Berges';
+  title    = 'Software Analyst';
+  company  = 'Grupo Oesia | Remote';
+  location = 'Zaragoza, Spain';
+}
+
+class Skills extends SoftwareDeveloper {
+  languages  = ['C#','Typescript','JavaScript', 'PHP'];
+  databases  = ['SQL','MySQL', 'MongoDB', 'Firebase'];
+  frameworks = ['Angular', 'Slim'];
+}
+```
 
 <img src="https://komarev.com/ghpvc/?username=diegoberges" alt="Diego Berges Views" />
 
