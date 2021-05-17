@@ -24,7 +24,7 @@ class Skills extends SoftwareDeveloper {
 ### Github Stats
 <p align="center">
   <a href="https://github.com/diegoberges">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=diegoberges&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515&count_private=true" />
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegoberges&&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515&count_private=true&layout=compact" />
+    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=diegoberges&show_icons=true&title_color=fff&icon_color=FFA656&text_color=A5D7FF&bg_color=161B22&count_private=true" />
+    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegoberges&&show_icons=true&title_color=fff&icon_color=FFA656&text_color=A5D7FF&bg_color=161B22&count_private=true&layout=compact" />
   </a>
 </p>
