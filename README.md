@@ -17,18 +17,13 @@ class Skills extends SoftwareDeveloper {
 }
 ```
 
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white">](https://www.linkedin.com/in/diegoberges/)
+[<img src="https://img.shields.io/badge/stackoverflow-%23FF5722.svg?&style=for-the-badge&logo=stackoverflow&logoColor=white" />](https://es.stackoverflow.com/users/10796/diego?tab=profile")
+[<img src="https://img.shields.io/badge/Portfolio-%23000000.svg?&style=for-the-badge">](https://www.diegoberges.com)
 
-<p align="center">
-<a href="https://www.diegoberges.com" target="_blank"><img alt="Website" src="https://img.shields.io/badge/Website-www.diegoberges.com-blue?style=flat&logo=google-chrome"></a>
-<a href="https://www.linkedin.com/in/diegoberges/" target="_blank"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-@diegoberges-blue?style=flat&logo=linkedin"></a>
-<a href="https://es.stackoverflow.com/users/10796/diego?tab=profile" target="_blank"><img alt="Stack Overflow" src="https://img.shields.io/badge/Stackoverflow-Diego%20Berges-blue?style=flat&logo=stackoverflow"></a>
-  
 ### Github Stats
 
 <a href="https://github.com/diegoberges">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=diegoberges&show_icons=true&title_color=fff&icon_color=79ff97&text_color=9f9f9f&bg_color=151515&count_private=true" />
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegoberges&count_private=true&theme=dracula&layout=compact" />
 </a>
-
-
-
