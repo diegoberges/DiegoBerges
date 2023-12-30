@@ -5,15 +5,15 @@ import SoftwareDeveloper from 'diegoberges';
 
 class Bio extends SoftwareDeveloper {
   name     = 'Diego Berges';
-  title    = 'Software Analyst';
+  title    = 'Frontend Engineer';
   company  = 'Grupo Oesia | Remote';
   location = 'Zaragoza, Spain';
 }
 
 class Skills extends SoftwareDeveloper {
-  languages  = ['C#','.NET Core','Typescript','JavaScript','PHP','HTML'];
-  databases  = ['SQL','MySQL','MongoDB','Firebase'];
-  frameworks = ['Angular','Slim','Bootstrap','MaterialDesign'];
+  frameworks = ['Angular','Tailwind','Slim','MaterialDesign'];
+  languages  = ['Typescript','JavaScript','PHP','HTML','C#'];
+  databases  = ['SQL','Oracle','Postgre','MySQL','MongoDB','Firebase'];
 }
 ```
 
