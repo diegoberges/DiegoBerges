@@ -2,42 +2,42 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@fontsource-variable/onest':
-    specifier: ^5.2.11
+    specifier: 5.2.11
     version: 5.2.11
   '@tailwindcss/vite':
-    specifier: ^4.3.2
+    specifier: 4.3.2
     version: 4.3.2(vite@8.1.4)
   astro:
-    specifier: ^7.0.7
+    specifier: 7.0.7
     version: 7.0.7(@emnapi/core@1.11.2)(@emnapi/runtime@1.11.2)
   flowbite:
-    specifier: ^4.0.2
+    specifier: 4.0.2
     version: 4.0.2
   tailwindcss:
-    specifier: ^4.3.2
+    specifier: 4.3.2
     version: 4.3.2
 
 devDependencies:
   '@astrojs/check':
-    specifier: ^0.9.9
+    specifier: 0.9.9
     version: 0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@6.0.3)
   '@typescript-eslint/parser':
-    specifier: ^8.63.0
+    specifier: 8.63.0
     version: 8.63.0(eslint@10.7.0)(typescript@6.0.3)
   eslint:
-    specifier: ^10.7.0
+    specifier: 10.7.0
     version: 10.7.0
   eslint-plugin-astro:
-    specifier: ^2.1.1
+    specifier: 2.1.1
     version: 2.1.1(@typescript-eslint/parser@8.63.0)(eslint@10.7.0)
   prettier:
-    specifier: ^3.9.5
+    specifier: 3.9.5
     version: 3.9.5
   prettier-plugin-astro:
-    specifier: ^0.14.1
+    specifier: 0.14.1
     version: 0.14.1
   typescript:
-    specifier: ^6.0.3
+    specifier: 6.0.3
     version: 6.0.3
 
 packages:

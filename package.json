@@ -1,8 +1,8 @@
 {
   "name": "diego-berges-portfolio",
   "type": "module",
-  "version": "1.0.0",
-  "packageManager": "pnpm@8.5.1",
+  "version": "0.0.1",
+  "packageManager": "pnpm@11.11.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,19 +13,19 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@fontsource-variable/onest": "^5.2.11",
-    "@tailwindcss/vite": "^4.3.2",
-    "astro": "^7.0.7",
-    "flowbite": "^4.0.2",
-    "tailwindcss": "^4.3.2"
+    "@fontsource-variable/onest": "5.2.11",
+    "@tailwindcss/vite": "4.3.2",
+    "astro": "7.0.7",
+    "flowbite": "4.0.2",
+    "tailwindcss": "4.3.2"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
-    "@typescript-eslint/parser": "^8.63.0",
-    "eslint": "^10.7.0",
-    "eslint-plugin-astro": "^2.1.1",
-    "prettier": "^3.9.5",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^6.0.3"
+    "@astrojs/check": "0.9.9",
+    "@typescript-eslint/parser": "8.63.0",
+    "eslint": "10.7.0",
+    "eslint-plugin-astro": "2.1.1",
+    "prettier": "3.9.5",
+    "prettier-plugin-astro": "0.14.1",
+    "typescript": "6.0.3"
   }
 }
