@@ -23,7 +23,9 @@ const { title, description = "Página web personal de Diego Berges" } =
     <title>{title}</title>
   </head>
   <body>
-    <main>
+    <main
+      class="mx-auto w-[800px] max-w-[calc(100%-2rem)] p-4 text-xl leading-[1.6]"
+    >
       <slot />
     </main>
     <script>
