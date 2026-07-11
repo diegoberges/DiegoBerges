@@ -1,11 +1,14 @@
 ---
 import "@fontsource-variable/onest";
+import "../styles/global.css";
+
 interface Props {
   title: string;
-  description: string;
+  description?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description = "Página web personal de Diego Berges" } =
+  Astro.props;
 ---
 
 <!doctype html>
@@ -23,24 +26,13 @@ const { title, description } = Astro.props;
     <main>
       <slot />
     </main>
+    <script>
+      import "flowbite";
+    </script>
   </body>
 </html>
 <style is:global>
-  :root {
-  }
   html {
     font-family: "Onest Variable", sans-serif;
-    font-weight: 200;
-  }
-
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    font-size: 20px;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
   }
 </style>

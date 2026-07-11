@@ -1,19 +1,19 @@
 ## Hello World <img src="https://raw.githubusercontent.com/parth-27/parth-27/master/Hi.gif" width="30px">, I'm [Diego!](https://github.com/diegoberges) !!
 
 ```js
-import SoftwareDeveloper from 'diegoberges';
+import SoftwareDeveloper from "diegoberges";
 
 class Bio extends SoftwareDeveloper {
-  name     = 'Diego Berges';
-  title    = 'Frontend Engineer';
-  company  = 'Grupo Oesia | Remote';
-  location = 'Zaragoza, Spain';
+  name = "Diego Berges";
+  title = "Frontend Engineer";
+  company = "Grupo Oesia | Remote";
+  location = "Zaragoza, Spain";
 }
 
 class Skills extends SoftwareDeveloper {
-  frameworks = ['Angular','Tailwind','Slim','MaterialDesign'];
-  languages  = ['Typescript','JavaScript','PHP','HTML','C#'];
-  databases  = ['SQL','Oracle','Postgre','MySQL','MongoDB','Firebase'];
+  frameworks = ["Angular", "Tailwind", "Slim", "MaterialDesign"];
+  languages = ["Typescript", "JavaScript", "PHP", "HTML", "C#"];
+  databases = ["SQL", "Oracle", "Postgre", "MySQL", "MongoDB", "Firebase"];
 }
 ```
 

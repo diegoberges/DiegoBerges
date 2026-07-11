@@ -2,3 +2,5 @@
 .scannerwork
 node_modules
 .astro
+old
+dist
