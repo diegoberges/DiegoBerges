@@ -18,14 +18,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-
-      - name: Debug versions
-        run: |
-          which -a pnpm
-          which -a node
-          node --version
-          pnpm --version
+          node-version: 22
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
