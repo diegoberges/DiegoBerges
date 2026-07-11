@@ -32,6 +32,18 @@ There is no test suite configured in this repo.
 
 `old/` (gitignored, not tracked) holds the previous version of the site — the Astro 4 / Tailwind 3 / Bun stack and its components (`Presentation`, `Experience`, etc.) — kept locally as a reference while migrating/redesigning screens onto the new stack. It's excluded from `tsconfig.json`, ESLint, and Prettier. Don't treat it as part of the working codebase.
 
+## Agent skills
+
+`.agents/skills/` (tracked via `skills-lock.json`) holds installed agent skills relevant to this project — consult the matching one before doing related work:
+
+- `astro` — Astro components, pages, content collections, deployment, CLI.
+- `tailwind-css-patterns` — Tailwind v4.1+ utility patterns, responsive/dark-mode/component composition.
+- `frontend-design` — building distinctive, polished UI instead of generic-looking output.
+- `accessibility` — WCAG 2.2 audits and fixes.
+- `seo` — meta tags, structured data, technical SEO.
+- `typescript-advanced-types` — generics, conditional/mapped types.
+- `nodejs-backend-patterns`, `nodejs-best-practices` — installed but not currently applicable; this site has no backend/API.
+
 ## Deployment
 
 - Hosted on **GitHub Pages** with a custom domain (`CNAME` → `diegoberges.com`).
