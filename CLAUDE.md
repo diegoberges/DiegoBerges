@@ -14,8 +14,7 @@ Personal portfolio site for Diego Berges, served at diegoberges.com. Built with 
 - `pnpm run preview` — preview the production build locally
 - `pnpm run lint` — lint (`eslint.config.mjs`, flat config, using `eslint-plugin-astro`'s `recommended` config + `@typescript-eslint/parser` for the `.astro` frontmatter)
 - `pnpm run format` — format with Prettier (`prettier-plugin-astro` handles `.astro` files)
-
-There is no test suite configured in this repo.
+- `pnpm run test` — run unit tests with Vitest (`vitest.config.ts` uses Astro's `getViteConfig()` helper). No test files exist yet, so this currently passes trivially (`--passWithNoTests`).
 
 ## Architecture
 
@@ -44,12 +43,15 @@ There is no test suite configured in this repo.
 - `typescript-advanced-types` — generics, conditional/mapped types.
 - `nodejs-backend-patterns`, `nodejs-best-practices` — installed but not currently applicable; this site has no backend/API.
 
-## Deployment
+## CI
 
-- Hosted on **GitHub Pages** with a custom domain (`CNAME` → `diegoberges.com`).
-- Deployment is automated via `.github/workflows/deploy.yml` using `withastro/action@v6`:
-  - Triggers on every push to `main` (or manual `workflow_dispatch`).
-  - Build job installs deps and builds the site with pnpm (`package-manager: pnpm@latest`, Node 20).
-  - Deploy job publishes the build output to GitHub Pages using `actions/deploy-pages`.
-- `astro.config.mjs` sets `site: 'https://diegoberges.com'`.
-- Code quality is tracked via SonarCloud (`sonar-project.properties`, project key `DiegoBerges`).
+`.github/workflows/ci.yml` runs on every push and pull request: installs with pnpm, then `pnpm run lint` and `prettier --check .`. This is the check Vercel's Deployment Checks gate on (see below). Sonar is **not** wired into CI — `sonar-project.properties` exists but its only associated state (`.scannerwork/`, gitignored) is from a one-off local scan against `localhost:9000`, not a real SonarQube Cloud project. Add it properly if/when a SonarQube Cloud project is connected.
+
+## Deployment (mid-migration: GitHub Pages → Vercel)
+
+The site is moving from GitHub Pages to Vercel. Both are live in parallel right now — don't assume either is fully decommissioned without checking current state:
+
+- **GitHub Pages** (legacy, still authoritative for `diegoberges.com`): `.github/workflows/deploy.yml` builds and publishes to GitHub Pages via `withastro/action@v6` on every push to `main`, no CI gate. `CNAME` → `diegoberges.com`. This keeps serving the live domain untouched during the migration.
+- **Vercel** (target): once the repo is connected via Vercel's GitHub integration, it builds a deployment on every push, but only promotes to production once the `checks` job from `ci.yml` passes (Vercel Deployment Checks, configured in the dashboard under Project Settings → Build and Deployment). For now it serves on Vercel's own `*.vercel.app` domain, not `diegoberges.com`.
+- **Cutover (not done yet)**: once Vercel is verified, add `diegoberges.com` as a custom domain in the Vercel project, repoint DNS at the registrar, then remove `deploy.yml`/`CNAME` and disable GitHub Pages. Until that happens, treat GitHub Pages as the source of truth for the live site.
+- `astro.config.mjs` sets `site: 'https://diegoberges.com'` (the eventual target, already correct for both hosts).
