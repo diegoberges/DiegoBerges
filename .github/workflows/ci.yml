@@ -20,6 +20,13 @@ jobs:
         with:
           node-version: 24
 
+      - name: Debug versions
+        run: |
+          which -a pnpm
+          which -a node
+          node --version
+          pnpm --version
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
