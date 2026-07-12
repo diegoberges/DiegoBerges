@@ -2,76 +2,29 @@
 import ExperienceItem from "./ExperienceItem.astro";
 
 const TAGS = {
-  ANGULAR: {
-    name: "Angular",
-    class: "bg-red-100 text-red-800",
-    icon: "fab fa-angular",
-  },
-  TAILWIND: {
-    name: "React",
-    class: "bg-blue-100 text-blue-800",
-    icon: "fab fa-react",
-  },
-  MATERIAL: {
-    name: "Material",
-    class: "bg-purple-100 text-purple-800",
-    icon: "fab fa-angular",
-  },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    class: "bg-blue-100 text-blue-800",
-    icon: "fab fa-react",
-  },
-  PHP: {
-    name: "PHP",
-    class: "bg-purple-100 text-purple-800",
-    icon: "fab fa-angular",
-  },
-  HTML: {
-    name: "HTML",
-    class: "bg-blue-100 text-blue-800",
-    icon: "fab fa-react",
-  },
-  JAVASCRIPT: {
-    name: "Javascript",
-    class: "bg-purple-100 text-purple-800",
-    icon: "fab fa-angular",
-  },
-  WORDPRESS: {
-    name: "Wordpress",
-    class: "bg-blue-100 text-blue-800",
-    icon: "fab fa-react",
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    class: "bg-purple-100 text-purple-800",
-    icon: "fab fa-angular",
-  },
-  NET: {
-    name: ".NET",
-    class: "bg-blue-100 text-blue-800",
-    icon: "fab fa-react",
-  },
-  WPF: {
-    name: "WPF",
-    class: "bg-purple-100 text-purple-800",
-    icon: "fab fa-angular",
-  },
-  SQL: {
-    name: "SQL",
-    class: "bg-blue-100 text-blue-800",
-    icon: "fab fa-react",
-  },
+  ANGULAR: { name: "Angular", class: "bg-red-100 text-red-800" },
+  TAILWIND: { name: "Tailwind", class: "bg-blue-100 text-blue-800" },
+  MATERIAL: { name: "Material", class: "bg-purple-100 text-purple-800" },
+  TYPESCRIPT: { name: "TypeScript", class: "bg-blue-100 text-blue-800" },
+  PHP: { name: "PHP", class: "bg-purple-100 text-purple-800" },
+  HTML: { name: "HTML", class: "bg-blue-100 text-blue-800" },
+  JAVASCRIPT: { name: "JavaScript", class: "bg-purple-100 text-purple-800" },
+  WORDPRESS: { name: "WordPress", class: "bg-blue-100 text-blue-800" },
+  BOOTSTRAP: { name: "Bootstrap", class: "bg-purple-100 text-purple-800" },
+  NET: { name: ".NET", class: "bg-blue-100 text-blue-800" },
+  WPF: { name: "WPF", class: "bg-purple-100 text-purple-800" },
+  SQL: { name: "SQL", class: "bg-blue-100 text-blue-800" },
 };
 
 const EXPERIENCE = [
   {
-    title: "Software Engineer",
+    title: "Analista Programador Angular",
     company: "Grupo Oesía",
     location: "Zaragoza",
     startDate: "Abril 2022",
     endDate: "Actualmente",
-    description: "I worked on the Google Search team.",
+    description:
+      "- Angular +16, IONIC, RXJS, HTML5, CSS3, SASS, Tailwind - JIRA, GIT, CI/CD - Optimización de rendimiento en desarrollos actuales - Revisión técnica de código (Pull Request) - Gestión de equipos",
     tags: [
       TAGS.ANGULAR,
       TAGS.TAILWIND,
@@ -81,7 +34,7 @@ const EXPERIENCE = [
     ],
   },
   {
-    title: "Analista Programador",
+    title: "Analista Programador .NET",
     company: "Grupo Oesía",
     location: "Zaragoza",
     startDate: "Mayo 2019",
@@ -91,7 +44,7 @@ const EXPERIENCE = [
     tags: [TAGS.NET, TAGS.WPF, TAGS.SQL],
   },
   {
-    title: "Programador Senior",
+    title: "Programador Sénior",
     company: "Audinfor System SL",
     location: "Zaragoza",
     startDate: "Septiembre 2017",
@@ -114,7 +67,7 @@ const EXPERIENCE = [
     startDate: "Noviembre 2015",
     endDate: "Septiembre 2017",
     description:
-      "Diseño y desarrollo de páginas web corporativas. Desarrollo y optimización de CRM web para nuestros clientes. Creación y desarrollo de APIs de uso interno. Creación y desarrollo de proyectos en Angular",
+      "Diseño y desarrollo de páginas web corporativas. Desarrollo y optimización de CRM web para nuestros clientes. Creación y desarrollo de APIs de uso interno. Creación y desarrollo de proyectos en AngularJS. Mantenimiento e implantación de servidores Linux.",
     tags: [
       TAGS.ANGULAR,
       TAGS.MATERIAL,
@@ -127,9 +80,9 @@ const EXPERIENCE = [
   {
     title: "Técnico Informático y Desarrollador Web",
     company: "INTASA Zuera",
-    location: "ZUERA",
+    location: "Zuera",
     startDate: "Junio 2012",
-    endDate: "Noviembre 2015",
+    endDate: "Octubre 2015",
     description:
       "Realizo diferentes labores de reparación y mantenimiento de equipos, así como creación y modificación de paginas web, bases de datos y gestión de correos corporativos.",
     tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.WORDPRESS],
@@ -144,15 +97,16 @@ const EXPERIENCE = [
       "Trabajo en el que realicé diversas labores de programación y maquetación web, así como realizando banners, mailings y perfiles en redes sociales.",
     tags: [TAGS.HTML, TAGS.JAVASCRIPT, TAGS.PHP],
   },
-  // {
-  //   title: "Técnico informático",
-  //   company: "INTASA Zuera",
-  //   location: "Zuera",
-  //   startDate: "05-2010",
-  //   endDate: "10-2010",
-  //   description:
-  //     "Trabajo en el que se realizaba el mantenimiento y la reparación de equipos informáticos. Mantenimiento para empresas. Montaje de Redes.",
-  // },
+  {
+    title: "Técnico Informático",
+    company: "INTASA Zuera",
+    location: "Zuera",
+    startDate: "Marzo 2010",
+    endDate: "Octubre 2010",
+    description:
+      "Trabajo en el que se realizaba el mantenimiento y la reparación de equipos informáticos. Mantenimiento para empresas. Montaje de Redes.",
+    tags: [],
+  },
 ];
 ---
 
