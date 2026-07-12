@@ -1,7 +1,6 @@
 ---
 import "@fontsource-variable/onest";
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 
 interface Props {
   title: string;
@@ -24,9 +23,8 @@ const { title, description = "Página web personal de Diego Berges" } =
     <title>{title}</title>
   </head>
   <body>
-    <Header />
     <main
-      class="mx-auto w-[800px] max-w-[calc(100%-2rem)] p-4 pt-20 text-xl leading-[1.6]"
+      class="mx-auto w-[800px] max-w-[calc(100%-2rem)] p-4 text-xl leading-[1.6]"
     >
       <slot />
     </main>
