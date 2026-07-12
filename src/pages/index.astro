@@ -1,4 +1,5 @@
 ---
+import Education from "../components/Education.astro";
 import Experience from "../components/Experience.astro";
 import Presentation from "../components/Presentation.astro";
 import SectionContainer from "../components/shared/SectionContainer.astro";
@@ -7,13 +8,17 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout
   title="Diego Berges - Desarrollador y programador web"
-  description="Soy un programador web con 12 años de experiencia, especializado en desarrollo web versátil y diseño atractivo. Mi portafolio incluye toda mi experiencia profesional y mis mejores proyectos. Mis soluciones están optimizadas para motores de búsqueda, lo que garantiza una mejor visibilidad en línea y para tener un máximo rendimiento. Descubre ejemplos de mi trabajo y contacta conmigo para llevar tu proyecto web al siguiente nivel."
+  description="Soy Diego Berges, desarrollador web en Zaragoza especializado en Angular, con más de 15 años de experiencia. Descubre mi trayectoria profesional y formación."
 >
   <SectionContainer>
     <Presentation />
   </SectionContainer>
 
-  <SectionContainer title="Experiencia laboral">
+  <SectionContainer id="experiencia" title="Experiencia">
     <Experience />
+  </SectionContainer>
+
+  <SectionContainer id="estudios" title="Estudios">
+    <Education />
   </SectionContainer>
 </Layout>
