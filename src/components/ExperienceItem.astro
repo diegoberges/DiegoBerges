@@ -1,11 +1,16 @@
 ---
+interface DetailedDescription {
+  summary: string;
+  bullets?: string[];
+}
+
 interface Props {
   title: string;
   company: string;
   location: string;
   startDate: string;
   endDate: string;
-  description: string;
+  description: string | DetailedDescription;
   tags: {
     name: string;
     class: string;
@@ -25,9 +30,24 @@ const { title, company, location, startDate, endDate, description, tags } =
 </time>
 <h3 class="mt-2 text-lg font-semibold">{title}</h3>
 <h2 class="text-sm text-gray-400">{company}, {location}</h2>
-<p class="mb-4 mt-2 text-base font-normal text-gray-500 text-pretty">
-  {description}
-</p>
+{
+  typeof description === "string" ? (
+    <p class="mb-4 mt-2 text-base font-normal text-gray-500 text-pretty">
+      {description}
+    </p>
+  ) : (
+    <div class="mb-4 mt-2 text-base font-normal text-gray-500 text-pretty">
+      <p>{description.summary}</p>
+      {description.bullets && (
+        <ul class="mt-2 list-outside list-disc space-y-1 ps-5">
+          {description.bullets.map((bullet) => (
+            <li>{bullet}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
 
 {
   tags.map((tag) => (

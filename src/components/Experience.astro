@@ -22,8 +22,15 @@ const EXPERIENCE = [
     location: "Zaragoza",
     startDate: "Abril 2022",
     endDate: "Actualmente",
-    description:
-      "Trabajo con Angular en su última versión, buscando siempre construir aplicaciones eficientes. También me encargo de migrar proyectos antiguos a las versiones más recientes, pasándolos a componentes standalone, signals y detección de cambios zoneless. Soy responsable de gestionar la entrega continua del código, confeccionando una CI adaptada a cada uno de los proyectos. Además de programar, reviso el código de mis compañeros y me encargo de documentar y mantener al día la arquitectura frontend del proyecto.",
+    description: {
+      summary:
+        "Lidero el desarrollo frontend en Angular 20+ para proyectos de administración pública (Gobierno de Aragón), coordinando el equipo de desarrollo.",
+      bullets: [
+        "Desarrollo y optimizo aplicaciones ya en producción, además de dirigir la migración de proyectos legacy a arquitecturas Angular modernas (Signals, standalone components, zoneless), mejorando la mantenibilidad y preparando el código para futuras evoluciones del framework.",
+        "Establecí el proceso de revisión técnica de código (Pull Requests), elevando la calidad y consistencia del código entregado por el equipo.",
+        "Aplico buenas prácticas de rendimiento en Angular (lazy loading, OnPush/Signals para minimizar ciclos de detección de cambios, optimización de bundle size), mejorando los tiempos de carga y la fluidez de las aplicaciones.",
+      ],
+    },
     tags: [
       TAGS.ANGULAR,
       TAGS.TAILWIND,
@@ -38,8 +45,15 @@ const EXPERIENCE = [
     location: "Zaragoza",
     startDate: "Mayo 2019",
     endDate: "Abril 2022",
-    description:
-      "Antes de centrarme en Angular pasé tres años construyendo aplicaciones de escritorio con .NET y WPF, con SQL. Revisaba el código del equipo y ayudaba a coordinarlo.",
+    description: {
+      summary:
+        "Desarrollé software de gestión para entidades públicas en .NET Core 3.0, con arquitectura MVVM y DDD, coordinando el equipo de desarrollo.",
+      bullets: [
+        "Construí aplicaciones de escritorio y servicios siguiendo los patrones arquitectónicos definidos (MVVM, DDD, ReactiveUI), garantizando una base de código mantenible y escalable.",
+        "Establecí el proceso de revisión técnica de código (Pull Requests), elevando la calidad y consistencia del código entregado por el equipo.",
+        "Trabajé con acceso a datos mediante Dapper, Linq y Automapper, siguiendo los estándares de arquitectura definidos para el proyecto.",
+      ],
+    },
     tags: [TAGS.NET, TAGS.WPF, TAGS.SQL],
   },
   {
@@ -48,8 +62,16 @@ const EXPERIENCE = [
     location: "Zaragoza",
     startDate: "Noviembre 2015",
     endDate: "Mayo 2019",
-    description:
-      "Entré como programador web y, con el tiempo, acabé liderando el departamento: coordinando al equipo, definiendo la arquitectura de los proyectos nuevos y asegurándome de que todo, desde el frontend en Angular hasta las integraciones con clientes, funcionara rápido y sin sorpresas.",
+    description: {
+      summary:
+        "Entré como programador web construyendo páginas corporativas y CRMs a medida en AngularJS, y con el tiempo acabé liderando el Departamento Web para el sector Utility (electricidad y gas).",
+      bullets: [
+        "Coordinaba al equipo y gestionaba los proyectos de principio a fin, desde la toma de requisitos con el cliente hasta la planificación de plazos de entrega.",
+        "Desarrollaba APIs internas y de cliente, además de nuevos proyectos web para el sector.",
+        "Optimicé el rendimiento de los desarrollos en producción.",
+        "Implanté las primeras herramientas de integración continua del equipo, mejorando el flujo de despliegue.",
+      ],
+    },
     tags: [
       TAGS.ANGULAR,
       TAGS.MATERIAL,
