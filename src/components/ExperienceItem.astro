@@ -1,4 +1,6 @@
 ---
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+
 interface DetailedDescription {
   summary: string;
   bullets?: string[];
@@ -13,7 +15,7 @@ interface Props {
   description: string | DetailedDescription;
   tags: {
     name: string;
-    class: string;
+    icon: AstroComponentFactory;
   }[];
 }
 
@@ -58,7 +60,8 @@ const isCurrent = endDate === "Actualmente";
 
 {
   tags.map((tag) => (
-    <span class="inline-block px-2 py-1 mr-2 text-xs font-semibold text-gray-500 uppercase bg-gray-200 rounded">
+    <span class="inline-flex items-center gap-1.5 px-2 py-1 mr-2 mb-2 text-xs font-semibold text-gray-600 bg-gray-100 border border-gray-200 rounded-full">
+      <tag.icon class="size-3.5" />
       {tag.name}
     </span>
   ))

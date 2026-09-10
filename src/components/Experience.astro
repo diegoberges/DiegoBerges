@@ -1,24 +1,25 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro";
+import Angular from "./icons/Angular.astro";
+import DotNet from "./icons/DotNet.astro";
+import Html5 from "./icons/Html5.astro";
+import MaterialDesign from "./icons/MaterialDesign.astro";
+import MySql from "./icons/MySql.astro";
+import ReactiveX from "./icons/ReactiveX.astro";
+import Sass from "./icons/Sass.astro";
+import TailwindCss from "./icons/TailwindCss.astro";
+import TypeScript from "./icons/TypeScript.astro";
 
 const TAGS = {
-  ANGULAR: { name: "Angular", class: "bg-red-100 text-red-800" },
-  TAILWIND: { name: "Tailwind", class: "bg-blue-100 text-blue-800" },
-  MATERIAL: { name: "Material", class: "bg-purple-100 text-purple-800" },
-  TYPESCRIPT: { name: "TypeScript", class: "bg-blue-100 text-blue-800" },
-  HTML: { name: "HTML", class: "bg-blue-100 text-blue-800" },
-  NET: { name: ".NET Core", class: "bg-blue-100 text-blue-800" },
-  WPF: { name: "WPF", class: "bg-purple-100 text-purple-800" },
-  SQL: { name: "SQL", class: "bg-blue-100 text-blue-800" },
-  RXJS: { name: "RxJS", class: "bg-gray-200 text-gray-500" },
-  MVVM: { name: "MVVM", class: "bg-gray-200 text-gray-500" },
-  REACTIVEUI: { name: "ReactiveUI", class: "bg-gray-200 text-gray-500" },
-  DDD: { name: "DDD", class: "bg-gray-200 text-gray-500" },
-  LINQ: { name: "Linq", class: "bg-gray-200 text-gray-500" },
-  MYSQL: { name: "MySQL", class: "bg-gray-200 text-gray-500" },
-  SCSS: { name: "SCSS", class: "bg-gray-200 text-gray-500" },
-  SIGNALS: { name: "Signals", class: "bg-gray-200 text-gray-500" },
-  ZONELESS: { name: "Zoneless", class: "bg-gray-200 text-gray-500" },
+  ANGULAR: { name: "Angular", icon: Angular },
+  TAILWIND: { name: "Tailwind", icon: TailwindCss },
+  MATERIAL: { name: "Material", icon: MaterialDesign },
+  TYPESCRIPT: { name: "TypeScript", icon: TypeScript },
+  HTML: { name: "HTML", icon: Html5 },
+  NET: { name: ".NET Core", icon: DotNet },
+  RXJS: { name: "RxJS", icon: ReactiveX },
+  MYSQL: { name: "MySQL", icon: MySql },
+  SCSS: { name: "SCSS", icon: Sass },
 };
 
 const EXPERIENCE = [
@@ -37,14 +38,7 @@ const EXPERIENCE = [
         "Aplico buenas prácticas de rendimiento en Angular (lazy loading, OnPush/Signals para minimizar ciclos de detección de cambios, optimización de bundle size), mejorando los tiempos de carga y la fluidez de las aplicaciones.",
       ],
     },
-    tags: [
-      TAGS.ANGULAR,
-      TAGS.RXJS,
-      TAGS.SIGNALS,
-      TAGS.TAILWIND,
-      TAGS.TYPESCRIPT,
-      TAGS.ZONELESS,
-    ],
+    tags: [TAGS.ANGULAR, TAGS.RXJS, TAGS.TAILWIND, TAGS.TYPESCRIPT],
   },
   {
     title: "Analista Programador .NET",
@@ -61,15 +55,7 @@ const EXPERIENCE = [
         "Trabajé con acceso a datos mediante Dapper, Linq y Automapper, siguiendo los estándares de arquitectura definidos para el proyecto.",
       ],
     },
-    tags: [
-      TAGS.DDD,
-      TAGS.LINQ,
-      TAGS.MVVM,
-      TAGS.NET,
-      TAGS.REACTIVEUI,
-      TAGS.SQL,
-      TAGS.WPF,
-    ],
+    tags: [TAGS.NET],
   },
   {
     title: "Programador Sénior",
