@@ -1,0 +1,98 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import Angular from "./icons/Angular.astro";
+import DotNet from "./icons/DotNet.astro";
+import Html5 from "./icons/Html5.astro";
+import MaterialDesign from "./icons/MaterialDesign.astro";
+import MySql from "./icons/MySql.astro";
+import Oracle from "./icons/Oracle.astro";
+import ReactiveX from "./icons/ReactiveX.astro";
+import Sass from "./icons/Sass.astro";
+import TailwindCss from "./icons/TailwindCss.astro";
+import TypeScript from "./icons/TypeScript.astro";
+
+const TAGS = {
+  ANGULAR: { name: "Angular", icon: Angular },
+  TAILWIND: { name: "Tailwind", icon: TailwindCss },
+  MATERIAL: { name: "Material", icon: MaterialDesign },
+  TYPESCRIPT: { name: "TypeScript", icon: TypeScript },
+  HTML: { name: "HTML", icon: Html5 },
+  NET: { name: ".NET Core", icon: DotNet },
+  RXJS: { name: "RxJS", icon: ReactiveX },
+  MYSQL: { name: "MySQL", icon: MySql },
+  SCSS: { name: "SCSS", icon: Sass },
+  ORACLE: { name: "Oracle", icon: Oracle },
+};
+
+const EXPERIENCE = [
+  {
+    title: "Analista Programador Angular",
+    company: "Grupo Oesía",
+    location: "Zaragoza",
+    startDate: "Abril 2022",
+    endDate: "Actualmente",
+    description: {
+      summary:
+        "Lidero el desarrollo frontend en Angular 20+ para proyectos de administración pública (Gobierno de Aragón), coordinando el equipo de desarrollo.",
+      bullets: [
+        "Desarrollo y optimizo aplicaciones ya en producción, además de dirigir la migración de proyectos legacy a arquitecturas Angular modernas (Signals, standalone components, zoneless), mejorando la mantenibilidad y preparando el código para futuras evoluciones del framework.",
+        "Establecí el proceso de revisión técnica de código (Pull Requests), elevando la calidad y consistencia del código entregado por el equipo.",
+        "Aplico buenas prácticas de rendimiento en Angular (lazy loading, OnPush/Signals para minimizar ciclos de detección de cambios, optimización de bundle size), mejorando los tiempos de carga y la fluidez de las aplicaciones.",
+      ],
+    },
+    tags: [TAGS.ANGULAR, TAGS.RXJS, TAGS.TAILWIND, TAGS.TYPESCRIPT],
+  },
+  {
+    title: "Analista Programador .NET",
+    company: "Grupo Oesía",
+    location: "Zaragoza",
+    startDate: "Mayo 2019",
+    endDate: "Abril 2022",
+    description: {
+      summary:
+        "Desarrollé software de gestión para entidades públicas en .NET Core 3.0, con arquitectura MVVM y DDD, coordinando el equipo de desarrollo.",
+      bullets: [
+        "Construí aplicaciones de escritorio y servicios siguiendo los patrones arquitectónicos definidos (MVVM, DDD, ReactiveUI), garantizando una base de código mantenible y escalable.",
+        "Establecí el proceso de revisión técnica de código (Pull Requests), elevando la calidad y consistencia del código entregado por el equipo.",
+        "Trabajé con acceso a datos mediante Dapper, Linq y Automapper, siguiendo los estándares de arquitectura definidos para el proyecto.",
+      ],
+    },
+    tags: [TAGS.NET, TAGS.ORACLE],
+  },
+  {
+    title: "Programador Sénior",
+    company: "Audinfor System SL",
+    location: "Zaragoza",
+    startDate: "Noviembre 2015",
+    endDate: "Mayo 2019",
+    description: {
+      summary:
+        "Entré como programador web construyendo páginas corporativas y CRMs a medida en AngularJS, y con el tiempo acabé liderando el Departamento Web para el sector Utility (electricidad y gas).",
+      bullets: [
+        "Coordinaba al equipo y gestionaba los proyectos de principio a fin, desde la toma de requisitos con el cliente hasta la planificación de plazos de entrega.",
+        "Desarrollaba APIs internas y de cliente, además de nuevos proyectos web para el sector.",
+        "Optimicé el rendimiento de los desarrollos en producción.",
+        "Implanté las primeras herramientas de integración continua del equipo, mejorando el flujo de despliegue.",
+      ],
+    },
+    tags: [
+      TAGS.ANGULAR,
+      TAGS.HTML,
+      TAGS.MATERIAL,
+      TAGS.MYSQL,
+      TAGS.SCSS,
+      TAGS.TYPESCRIPT,
+    ],
+  },
+];
+---
+
+<ol class="relative border-gray-400 border-s">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

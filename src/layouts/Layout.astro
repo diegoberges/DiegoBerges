@@ -1,17 +1,21 @@
 ---
 import "@fontsource-variable/onest";
+import "../styles/global.css";
+
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description = "Página web personal de Diego Berges" } =
+  Astro.props;
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Página web personal de Diego Berges" />
+    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <meta name="author" content="Diego Berges" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -19,37 +23,18 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <main>
+    <main
+      class="mx-auto w-[800px] max-w-[calc(100%-2rem)] p-4 text-xl leading-[1.6]"
+    >
       <slot />
     </main>
+    <script>
+      import "flowbite";
+    </script>
   </body>
 </html>
 <style is:global>
-  :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light)) 30%,
-      white 60%
-    );
-  }
   html {
-    /* background-size: 224px; */
     font-family: "Onest Variable", sans-serif;
-    /* font-size: 21px; */
-    font-weight: 200;
-    /* line-height: 1.4; */
-  }
-
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    font-size: 20px;
-    line-height: 1.6;
   }
 </style>
