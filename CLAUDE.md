@@ -45,7 +45,7 @@ Personal portfolio site for Diego Berges, served at diegoberges.com. Built with 
 
 ## CI
 
-`.github/workflows/ci.yml` runs on every push and pull request: a single `checks` job (pnpm install, `prettier --check .`, `pnpm run lint`, `pnpm run build` — the build also runs `astro check`). This is the job Vercel's Deployment Checks gate on (see below). Code quality is covered by SonarCloud's **Automatic Analysis** (project `diegoberges_DiegoBerges`, org `diegoberges`), which analyzes every push/PR from SonarCloud's side with no CI job or token; its config lives in `.sonarcloud.properties`. Don't add a CI-based Sonar scan unless Automatic Analysis is switched off — the two conflict.
+`.github/workflows/ci.yml` runs on every push and pull request: a single `checks` job (pnpm install, `prettier --check .`, `pnpm run lint`, `pnpm run build` — the build also runs `astro check`). This is the job Vercel's Deployment Checks gate on (see below). Code quality is covered by a CI-based SonarCloud scan in `.github/workflows/build.yml` (project `diegoberges_DiegoBerges`, org `diegoberges`), running on pushes to `main` and on PRs. It uses **secretless analysis** (`SonarSource/sonarqube-auth-action` over GitHub OIDC, hence `id-token: write`), so there is no `SONAR_TOKEN` secret. Scanner config lives in `sonar-project.properties` (`.sonarcloud.properties` only applies to Automatic Analysis, which must stay off: the two conflict).
 
 ## Deployment (Vercel)
 
