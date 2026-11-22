@@ -45,7 +45,7 @@ Personal portfolio site for Diego Berges, served at diegoberges.com. Built with 
 
 ## CI
 
-`.github/workflows/ci.yml` runs on every push and pull request: installs with pnpm, then `pnpm run lint` and `prettier --check .`. This is the check Vercel's Deployment Checks gate on (see below). Sonar is **not** wired into CI — `sonar-project.properties` exists but its only associated state (`.scannerwork/`, gitignored) is from a one-off local scan against `localhost:9000`, not a real SonarQube Cloud project. Add it properly if/when a SonarQube Cloud project is connected.
+`.github/workflows/ci.yml` runs on every push and pull request with two jobs: `checks` (pnpm install, `prettier --check .`, `pnpm run lint`, `pnpm run build` — the build also runs `astro check`), which is the job Vercel's Deployment Checks gate on (see below); and `sonarcloud`, which runs `SonarSource/sonarqube-scan-action` against the SonarCloud project `diegoberges_DiegoBerges` (org `diegoberges`, config in `sonar-project.properties`). The Sonar job needs the `SONAR_TOKEN` repository secret and SonarCloud's Automatic Analysis turned off; it's skipped on PRs from forks/Dependabot, which don't get secrets.
 
 ## Deployment (mid-migration: GitHub Pages → Vercel)
 

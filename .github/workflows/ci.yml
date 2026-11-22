@@ -6,7 +6,7 @@ on:
 
 jobs:
   checks:
-    name: Lint & Prettier
+    name: Format, Lint & Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
@@ -19,12 +19,32 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Check formatting
+        run: pnpm exec prettier --check .
+
       - name: Lint
         run: pnpm run lint
 
-      - name: Check formatting
-        run: pnpm exec prettier --check .
+      - name: Build
+        run: pnpm run build
+
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    # Forked PRs and Dependabot don't get access to repository secrets
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history for accurate blame / new-code detection
+
+      - name: SonarCloud scan
+        uses: SonarSource/sonarqube-scan-action@v8.5.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
