@@ -47,11 +47,9 @@ Personal portfolio site for Diego Berges, served at diegoberges.com. Built with 
 
 `.github/workflows/ci.yml` runs on every push and pull request: a single `checks` job (pnpm install, `prettier --check .`, `pnpm run lint`, `pnpm run build` — the build also runs `astro check`). This is the job Vercel's Deployment Checks gate on (see below). Code quality is covered by SonarCloud's **Automatic Analysis** (project `diegoberges_DiegoBerges`, org `diegoberges`), which analyzes every push/PR from SonarCloud's side with no CI job or token; its config lives in `.sonarcloud.properties`. Don't add a CI-based Sonar scan unless Automatic Analysis is switched off — the two conflict.
 
-## Deployment (mid-migration: GitHub Pages → Vercel)
+## Deployment (Vercel)
 
-The site is moving from GitHub Pages to Vercel. Both are live in parallel right now — don't assume either is fully decommissioned without checking current state:
+The site is hosted on Vercel and served at `diegoberges.com` (custom domain on the Vercel project, DNS and SSL already set up). The earlier GitHub Pages deployment (`deploy.yml`, `CNAME`) has been removed.
 
-- **GitHub Pages** (legacy, still authoritative for `diegoberges.com`): `.github/workflows/deploy.yml` builds and publishes to GitHub Pages via `withastro/action@v6` on every push to `main`, no CI gate. `CNAME` → `diegoberges.com`. This keeps serving the live domain untouched during the migration.
-- **Vercel** (target): once the repo is connected via Vercel's GitHub integration, it builds a deployment on every push, but only promotes to production once the `checks` job from `ci.yml` passes (Vercel Deployment Checks, configured in the dashboard under Project Settings → Build and Deployment). For now it serves on Vercel's own `*.vercel.app` domain, not `diegoberges.com`.
-- **Cutover (not done yet)**: once Vercel is verified, add `diegoberges.com` as a custom domain in the Vercel project, repoint DNS at the registrar, then remove `deploy.yml`/`CNAME` and disable GitHub Pages. Until that happens, treat GitHub Pages as the source of truth for the live site.
-- `astro.config.mjs` sets `site: 'https://diegoberges.com'` (the eventual target, already correct for both hosts).
+- Vercel's GitHub integration builds a deployment on every push, but only promotes to production once the `checks` job from `ci.yml` passes (Vercel Deployment Checks, configured in the dashboard under Project Settings → Build and Deployment).
+- `astro.config.mjs` sets `site: 'https://diegoberges.com'`.
