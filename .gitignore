@@ -3,3 +3,13 @@
 node_modules
 .astro
 dist
+# Local agent tooling (impeccable installs, personal settings)
+.claude/settings.local.json
+.claude/skills/impeccable/
+.claude/agents/impeccable-*
+.agents/skills/impeccable/
+.codex/
+.github/agents/impeccable-*
+.github/hooks/impeccable.json
+.github/skills/impeccable/
+.impeccable/config.local.json
