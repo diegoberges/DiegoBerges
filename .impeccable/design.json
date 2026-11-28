@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-27T08:14:29.053823+00:00",
+  "title": "Design System: Diego Berges",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#404040",
+          "#525252",
+          "#737373",
+          "#a3a3a3",
+          "#e5e5e5",
+          "#ffffff"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#0a0a0a",
+          "#262626",
+          "#404040",
+          "#525252",
+          "#737373",
+          "#a3a3a3",
+          "#e5e5e5",
+          "#ffffff"
+        ]
+      },
+      "ink-heading": {
+        "role": "neutral",
+        "displayName": "Tinta de Titular",
+        "canonical": "oklch(21% 0.034 264.665)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      },
+      "slate-strong": {
+        "role": "neutral",
+        "displayName": "Pizarra Fuerte",
+        "canonical": "oklch(37.3% 0.034 259.733)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      },
+      "slate": {
+        "role": "neutral",
+        "displayName": "Pizarra",
+        "canonical": "oklch(44.6% 0.03 256.802)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      },
+      "slate-muted": {
+        "role": "neutral",
+        "displayName": "Pizarra Apagada",
+        "canonical": "oklch(55.1% 0.027 264.364)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      },
+      "slate-faint": {
+        "role": "neutral",
+        "displayName": "Pizarra Tenue",
+        "canonical": "oklch(70.7% 0.022 261.325)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      },
+      "mist-border": {
+        "role": "neutral",
+        "displayName": "Bruma Borde",
+        "canonical": "oklch(92.8% 0.006 264.531)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      },
+      "mist": {
+        "role": "neutral",
+        "displayName": "Bruma",
+        "canonical": "oklch(96.7% 0.003 264.542)",
+        "tonalRamp": [
+          "#101828",
+          "#1e2939",
+          "#364153",
+          "#4a5565",
+          "#6a7282",
+          "#99a1af",
+          "#d1d5dc",
+          "#f3f4f6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Saludo h1, una vez por página."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Títulos de sección."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Tamaño base de main y bio."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Nombre del puesto en la línea de tiempo."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Resumen y logros de cada puesto."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Fechas, empresa/ubicación, píldoras sociales."
+      },
+      "tag": {
+        "displayName": "Tag",
+        "purpose": "Etiquetas de tecnología."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-default",
+        "value": "150ms cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Transición de hover en píldoras sociales (Tailwind por defecto)."
+      },
+      {
+        "name": "ping",
+        "value": "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        "purpose": "Halo del marcador del puesto actual; oculto con prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": []
+  },
+  "components": [
+    {
+      "name": "Social Pill",
+      "kind": "nav",
+      "refersTo": "social-pill",
+      "description": "Enlace de salida a LinkedIn/GitHub; abre en pestaña nueva.",
+      "html": "<a class=\"ds-social-pill\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5z\"/></svg>Github</a>",
+      "css": ".ds-social-pill{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:8px 16px;font-family:'Onest Variable',sans-serif;font-size:0.875rem;line-height:1.43;color:#000;text-decoration:none;background:rgb(0 0 0 / 0.05);border:1px solid rgb(0 0 0 / 0.1);border-radius:9999px;transition:background-color 150ms cubic-bezier(0.4,0,0.2,1);}.ds-social-pill:hover{background:rgb(0 0 0 / 0.1);}.ds-social-pill:focus-visible{outline:2px solid #101828;outline-offset:2px;}"
+    },
+    {
+      "name": "Tech Tag",
+      "kind": "chip",
+      "refersTo": "tech-tag",
+      "description": "Etiqueta estática de tecnología con su logo a color.",
+      "html": "<span class=\"ds-tech-tag\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><rect width=\"24\" height=\"24\" rx=\"2\" fill=\"#3178c6\"/><text x=\"12\" y=\"17\" font-size=\"10\" font-weight=\"700\" text-anchor=\"middle\" fill=\"#fff\" font-family=\"sans-serif\">TS</text></svg>TypeScript</span>",
+      "css": ".ds-tech-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;margin:0 8px 8px 0;font-family:'Onest Variable',sans-serif;font-size:0.75rem;line-height:1.33;font-weight:600;color:#4a5565;background:#f3f4f6;border:1px solid #e5e7eb;border-radius:9999px;}"
+    },
+    {
+      "name": "Experience Timeline Entry",
+      "kind": "custom",
+      "refersTo": "timeline-dot",
+      "description": "Entrada de la línea de tiempo; el puesto actual lleva halo pulsante.",
+      "html": "<ol class=\"ds-timeline\"><li class=\"ds-timeline-item\"><span class=\"ds-timeline-dot ds-current\"></span><time class=\"ds-timeline-date\">Abril 2022 - Actualmente</time><h3 class=\"ds-timeline-title\">Analista Programador Angular</h3><p class=\"ds-timeline-org\">Grupo Oesía, Zaragoza</p><p class=\"ds-timeline-body\">Lidero el desarrollo frontend en Angular 20+ para proyectos de administración pública.</p></li></ol>",
+      "css": ".ds-timeline{position:relative;list-style:none;margin:0;padding:0;border-inline-start:1px solid #99a1af;font-family:'Onest Variable',sans-serif;}.ds-timeline-item{position:relative;margin:0 0 40px 16px;}.ds-timeline-dot{position:absolute;inset-inline-start:-22.5px;top:0.65rem;width:12px;height:12px;border-radius:9999px;background:#364153;border:1px solid #101828;}.ds-current::after{content:'';position:absolute;inset:-1px;border-radius:9999px;background:#364153;opacity:.75;animation:ds-ping 1s cubic-bezier(0,0,0.2,1) infinite;}@keyframes ds-ping{75%,100%{transform:scale(2);opacity:0}}@media (prefers-reduced-motion:reduce){.ds-current::after{display:none}}.ds-timeline-date{display:block;font-size:0.875rem;line-height:1;color:#6a7282;}.ds-timeline-title{margin:8px 0 0;font-size:1.125rem;font-weight:600;color:#000;}.ds-timeline-org{margin:0;font-size:0.875rem;color:#4a5565;}.ds-timeline-body{margin:8px 0 16px;max-width:56ch;font-size:1rem;line-height:1.5;color:#364153;text-wrap:pretty;}"
+    },
+    {
+      "name": "Section Heading",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Título de sección (p. ej. Experiencia).",
+      "html": "<h2 class=\"ds-section-heading\">Experiencia</h2>",
+      "css": ".ds-section-heading{margin:40px 0 20px;font-family:'Onest Variable',sans-serif;font-size:1.5rem;line-height:1.33;font-weight:700;color:#101828;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Expediente Limpio",
+    "overview": "Un CV bien maquetado sobre papel blanco: el contenido es el diseño. Nombre, bio y trayectoria, dispuestos con orden y sin ornamento. La jerarquía la marcan el peso tipográfico y los valores de gris, no el color, las ilustraciones ni los contenedores. Una columna estrecha y centrada que se lee de arriba abajo, con la línea de tiempo de experiencia como columna vertebral.\n\nLa base es deliberadamente monocroma: blanco, negro y una escala de grises fríos. El único color presente hoy lo aportan los logos oficiales de cada tecnología dentro de las etiquetas. El sistema deja sitio para un único acento de marca en el futuro, aún sin definir; hasta que se elija, nada añade color propio.\n\nLa densidad es moderada: texto generoso (base 1.25rem, interlineado 1.6) y espacio amplio entre entradas de experiencia, para que cada puesto se escanee como un bloque.",
+    "keyCharacteristics": [
+      "Papel blanco, escala monocroma de grises fríos, sin acento todavía.",
+      "Una sola sans-serif variable (Onest) en toda la jerarquía.",
+      "Columna única centrada de 800px con margen lateral de 1rem en pantallas estrechas.",
+      "Línea de tiempo vertical con marcadores circulares; el puesto actual late.",
+      "Píldoras completamente redondeadas (9999px) para enlaces sociales y etiquetas.",
+      "Plano: sin sombras, sin tarjetas, sin capas."
+    ],
+    "rules": [
+      {
+        "name": "The One Accent Rule",
+        "body": "El sistema admitirá un único color de marca en el futuro, y solo uno. Mientras no esté definido, ningún elemento añade color propio; los logos de tecnología son la única excepción, porque su color pertenece a la marca que representan, no al sitio.",
+        "section": "colors"
+      },
+      {
+        "name": "The Grey Hierarchy Rule",
+        "body": "La importancia baja en este orden: tinta, pizarra fuerte, pizarra, pizarra apagada. La pizarra tenue nunca se usa para texto. Para destacar se usa más peso o más tamaño, no un gris más oscuro.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "Todo el texto es Onest. La jerarquía sale del tamaño y del peso (400 / 600 / 700), nunca de una segunda familia.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Page Rule",
+        "body": "Nada flota. Si un elemento necesita separarse, usa espacio o un borde de 1px, nunca una sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do mantener la columna de 800px con su tope max-w-[calc(100%-2rem)]; sin él, el móvil pierde los márgenes.",
+      "Do construir jerarquía con peso (400/600/700) y el orden de grises tinta → pizarra fuerte → pizarra → pizarra apagada.",
+      "Do usar la píldora completa (9999px) para cualquier nuevo elemento de enlace o etiqueta.",
+      "Do limitar el movimiento al marcador del puesto actual y respetar prefers-reduced-motion.",
+      "Do introducir un único acento de marca, y solo uno, cuando se defina; usarlo con moderación."
+    ],
+    "donts": [
+      "Don't añadir sombras, tarjetas ni superficies con capas: la página es plana.",
+      "Don't introducir una segunda tipografía ni usar Inter (el defecto de Flowbite).",
+      "Don't añadir color decorativo antes de definir el acento; solo los logos de tecnología llevan color.",
+      "Don't usar componentes azules de Flowbite (como el Badge sin uso) como si fueran parte del sistema.",
+      "Don't usar pizarra tenue para texto: su contraste sobre blanco es 2,6:1; queda reservada a la línea de tiempo y los marcadores de viñeta."
+    ]
+  }
+}

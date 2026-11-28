@@ -1,8 +1,9 @@
 <a
-  class="rounded-full border border-black/10 flex justify-center items-center gap-x-2 py-2 px-4 text-sm bg-black/5 hover:bg-black/10 transition"
+  class="inline-flex min-h-11 items-center justify-center gap-x-2 rounded-full border border-black/10 bg-black/5 px-4 py-2 text-sm transition-colors hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:bg-black/15"
   target="_blank"
   rel="noopener noreferrer"
   {...Astro.props}
 >
   <slot />
+  <span class="sr-only">(se abre en una pestaña nueva)</span>
 </a>

@@ -5,17 +5,17 @@ import SocialPill from "./shared/SocialPill.astro";
 ---
 
 <h1 class="text-3xl font-bold">Hola, soy Diego Berges.</h1>
-<h2 class="pt-2 pb-2 opacity-80 mt-2">
+<p class="mt-4 opacity-80">
   Desarrollador web, con más de 15 años de experiencia. Especializado en crear
   aplicaciones web.
-</h2>
+</p>
 
-<nav class="flex gap-x-2 mt-4">
+<nav aria-label="Redes sociales" class="mt-6 flex flex-wrap gap-2">
   <SocialPill href="https://www.linkedin.com/in/diegoberges/">
-    <LinkedIn class="size-5" /> LinkedIn
+    <LinkedIn class="size-5" aria-hidden="true" /> LinkedIn
   </SocialPill>
 
   <SocialPill href="https://github.com/diegoberges">
-    <Github class="size-5" /> Github
+    <Github class="size-5" aria-hidden="true" /> GitHub
   </SocialPill>
 </nav>
