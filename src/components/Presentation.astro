@@ -1,21 +1,15 @@
 ---
-import Github from "./icons/Github.astro";
-import LinkedIn from "./icons/LinkedIn.astro";
-import SocialPill from "./shared/SocialPill.astro";
+import SocialLinks from "./SocialLinks.astro";
 ---
 
-<h1 class="text-3xl font-bold">Hola, soy Diego Berges.</h1>
-<p class="mt-4 opacity-80">
+<h1
+  class="text-[clamp(2.5rem,1.6rem+3.6vw,3.5rem)] leading-[1.05] font-bold tracking-[-0.02em] text-balance"
+>
+  Hola, soy Diego Berges.
+</h1>
+<p class="mt-5 max-w-[48ch] text-pretty opacity-80">
   Desarrollador web, con más de 15 años de experiencia. Especializado en crear
   aplicaciones web.
 </p>
 
-<nav aria-label="Redes sociales" class="mt-6 flex flex-wrap gap-2">
-  <SocialPill href="https://www.linkedin.com/in/diegoberges/">
-    <LinkedIn class="size-5" aria-hidden="true" /> LinkedIn
-  </SocialPill>
-
-  <SocialPill href="https://github.com/diegoberges">
-    <Github class="size-5" aria-hidden="true" /> GitHub
-  </SocialPill>
-</nav>
+<SocialLinks class="mt-6" />

@@ -14,9 +14,10 @@ colors:
 typography:
   display:
     fontFamily: "Onest Variable, sans-serif"
-    fontSize: "1.875rem"
+    fontSize: "clamp(2.5rem, 1.6rem + 3.6vw, 3.5rem)"
     fontWeight: 700
-    lineHeight: 1.2
+    lineHeight: 1.05
+    letterSpacing: "-0.02em"
   headline:
     fontFamily: "Onest Variable, sans-serif"
     fontSize: "1.5rem"
@@ -104,8 +105,8 @@ A neutral palette with a slight blue tint (Tailwind 4's cool `gray` scale) on pu
 ### Neutral
 
 - **Papel** (paper): the background of the whole page. It is the only surface; no layer sits above it.
-- **Tinta** (ink): the main text, covering the h1, role titles and the base text of social pills. The bio uses the same ink at 80% opacity.
-- **Tinta de Titular** (ink-heading): section headings such as "Experiencia" (Flowbite's `text-heading` token). Almost black with a blue undertone.
+- **Tinta** (ink): the main text, covering the h1, section headings, role titles and the base text of social pills. The bio uses the same ink at 80% opacity.
+- **Tinta de Titular** (ink-heading): no longer used for text; section headings now share ink with the h1 so the page has a single black. It survives only as the border of the timeline markers.
 - **Pizarra Fuerte** (slate-strong): the summary sentence of each role, the second reading level after the title. It also fills the timeline markers, whose border is ink-heading.
 - **Pizarra** (slate): the company and location under each role, and the text of technology tags.
 - **Pizarra Apagada** (slate-muted): achievement bullets and date ranges. This is the voice for secondary reading.
@@ -132,12 +133,12 @@ Onest is declared on `html` and overrides the default Flowbite stack (Inter), wh
 
 ### Hierarchy
 
-- **Display** (700, 1.875rem): the h1 greeting only, once per page.
+- **Display** (700, fluid from 2.5rem on phones to 3.5rem on desktop, line height 1.05, tracking -0.02em, `text-wrap: balance`): the h1 greeting only, once per page. It sits more than twice the size of the Headline so the greeting reads as the top of the page, not as another section.
 - **Headline** (700, 1.5rem): section headings ("Experiencia"), with 40px of space above and 20px below.
-- **Lead** (400, 1.25rem, line height 1.6): the base size of `<main>` and the bio under the greeting (at 80% opacity).
+- **Lead** (400, 1.25rem, line height 1.6): the base size of `<main>` and the bio under the greeting (at 80% opacity, capped at 48ch, about 64 characters, with `text-wrap: pretty`).
 - **Title** (600, 1.125rem): the role name in each timeline entry.
 - **Body** (400, 1rem): the role summary (slate-strong) and achievement bullets (slate-muted), with `text-wrap: pretty`. Capped at `56ch`, about 75 characters of Onest text, because `ch` measures the wide zero.
-- **Label** (400, 0.875rem): dates, company and location, and the social pills.
+- **Label** (400, 0.875rem): dates (with tabular numerals), company and location, and the social pills.
 - **Tag** (600, 0.75rem): the technology tags.
 
 ### Named Rules
@@ -176,6 +177,14 @@ These are the page's only exits, to LinkedIn and GitHub. They are discreet and t
 - **Hover / active:** the fill rises to 10% black on hover and 15% while pressed, with Tailwind's default colour transition (150ms).
 - **Focus:** a 2px ink outline offset by 2px on `:focus-visible`.
 - **Behavior:** they open in a new tab (`target="_blank"`, `rel="noopener noreferrer"`).
+
+### Not-found Page (404)
+
+Centred vertically in the viewport. A large decorative "404" in ink (700, `clamp(6rem, 24vw, 11rem)`, tracking -0.04em, hidden from assistive tech), then the h1 at Display size ("Esta página no existe.") and one Lead line in first person. Below, a two-step timeline borrowed from the experience component: "Estás aquí" with the requested path (filled in client-side) on a hollow pulsing marker, a dashed slate-faint line, and "Inicio" with a link to diegoberges.com on a solid marker. It ends on one row of pills: "Volver al inicio" (Label at 600, no icon), LinkedIn and GitHub. No error-code label above the heading, no illustration.
+
+### Social Preview Image
+
+`public/og.png`, 1200×630: the name in Onest 700 on paper, one slate-strong line with the role, specialism, years and city, and the domain beside a timeline marker. It follows the same monochrome rules as the page.
 
 ### Technology Tags (Chips)
 

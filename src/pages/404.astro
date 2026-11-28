@@ -1,0 +1,81 @@
+---
+import SocialLinks from "../components/SocialLinks.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Página no encontrada · Diego Berges"
+  description="Esta página no existe en diegoberges.com."
+  noindex
+>
+  <div class="flex min-h-[calc(100dvh-2rem)] flex-col justify-center py-10">
+    <p
+      class="text-[clamp(6rem,24vw,11rem)] leading-none -ms-[0.025em] font-bold tracking-[-0.04em] select-none"
+      aria-hidden="true"
+    >
+      404
+    </p>
+    <h1 class="mt-4 text-3xl font-bold">Esta página no existe.</h1>
+    <p class="mt-4 max-w-[46ch] opacity-80">
+      Puede que el enlace esté mal escrito o que la página ya no esté. Vuelve al
+      inicio o escríbeme directamente.
+    </p>
+
+    <ol class="mt-10 text-base" aria-label="Dónde estás">
+      <li class="relative border-s border-dashed border-gray-400 ps-5 pb-8">
+        <span
+          class="absolute -inset-s-1.5 top-px flex size-3"
+          aria-hidden="true"
+        >
+          <span
+            class="absolute inline-flex size-full animate-ping rounded-full bg-gray-700 opacity-75 motion-reduce:hidden"
+          ></span>
+          <span
+            class="relative inline-flex size-3 rounded-full border border-gray-900 bg-white"
+          ></span>
+        </span>
+        <p class="text-sm leading-none text-gray-500">Estás aquí</p>
+        <p class="mt-2 font-semibold break-all" data-requested-path>
+          Esta dirección
+        </p>
+        <p class="text-sm text-gray-600">No lleva a ninguna parte.</p>
+      </li>
+      <li class="relative border-s border-transparent ps-5">
+        <span
+          class="absolute -inset-s-1.5 top-px size-3 rounded-full border border-gray-900 bg-gray-700"
+          aria-hidden="true"></span>
+        <p class="text-sm leading-none text-gray-500">Inicio</p>
+        <a
+          href="/"
+          class="mt-2 inline-block rounded-sm font-semibold underline decoration-gray-400 underline-offset-4 transition-colors hover:decoration-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+        >
+          diegoberges.com
+        </a>
+        <p class="text-sm text-gray-600">Quién soy y dónde he trabajado.</p>
+      </li>
+    </ol>
+
+    <div class="mt-10 flex flex-wrap gap-2">
+      <a
+        href="/"
+        class="inline-flex min-h-11 items-center rounded-full border border-black/10 bg-black/5 px-4 py-2 text-sm font-semibold transition-colors hover:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black active:bg-black/15"
+      >
+        Volver al inicio
+      </a>
+      <SocialLinks />
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const target = document.querySelector("[data-requested-path]");
+  let path = window.location.pathname;
+  try {
+    path = decodeURIComponent(path);
+  } catch {
+    // Malformed escape sequence: show the raw path instead.
+  }
+  if (target && !["/", "/404", "/404/", "/404.html"].includes(path)) {
+    target.textContent = path;
+  }
+</script>

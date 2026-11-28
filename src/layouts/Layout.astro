@@ -5,10 +5,18 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  /** Keep the page out of search results (e.g. the 404). */
+  noindex?: boolean;
 }
 
-const { title, description = "Página web personal de Diego Berges" } =
-  Astro.props;
+const {
+  title,
+  description = "Página web personal de Diego Berges",
+  noindex = false,
+} = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("/og.png", Astro.site);
 ---
 
 <!doctype html>
@@ -21,10 +29,29 @@ const { title, description = "Página web personal de Diego Berges" } =
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {
+      noindex ? (
+        <meta name="robots" content="noindex" />
+      ) : (
+        <link rel="canonical" href={canonicalUrl} />
+      )
+    }
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Diego Berges" />
+    <meta property="og:locale" content="es_ES" />
+    {!noindex && <meta property="og:url" content={canonicalUrl} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Diego Berges, desarrollador web" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <main
-      class="mx-auto w-[800px] max-w-[calc(100%-2rem)] p-4 text-xl leading-[1.6]"
+      class="mx-auto w-[800px] max-w-[calc(100%-2rem)] p-4 text-xl leading-[1.6] wrap-break-word"
     >
       <slot />
     </main>
