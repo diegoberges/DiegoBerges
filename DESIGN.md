@@ -172,8 +172,9 @@ These are the page's only exits, to LinkedIn and GitHub. They are discreet and t
 
 - **Shape:** a full pill (9999px).
 - **Color:** a 5% black fill, a 10% black border and ink text, with a 20px brand icon on the left.
-- **Spacing:** 8px vertical by 16px horizontal, with an 8px gap between icon and text and 8px between pills.
-- **Hover:** the fill rises to 10% black, with Tailwind's default transition (150ms).
+- **Spacing:** 8px vertical by 16px horizontal with a 44px minimum height (touch target), an 8px gap between icon and text and 8px between pills.
+- **Hover / active:** the fill rises to 10% black on hover and 15% while pressed, with Tailwind's default colour transition (150ms).
+- **Focus:** a 2px ink outline offset by 2px on `:focus-visible`.
 - **Behavior:** they open in a new tab (`target="_blank"`, `rel="noopener noreferrer"`).
 
 ### Technology Tags (Chips)
@@ -182,7 +183,7 @@ These are small, quiet labels that show the stack for each role.
 
 - **Style:** mist fill, a 1px mist-border outline and slate text at Tag weight, with the technology's 14px logo in its original colours.
 - **Shape:** a full pill. The padding is 4px by 8px with a 6px gap between logo and text.
-- **State:** static and not interactive.
+- **State:** static and not interactive. Each entry's tags form a `<ul>` labelled "Tecnologías", wrapped with an 8px gap.
 
 ### Experience Timeline (Signature Component)
 
