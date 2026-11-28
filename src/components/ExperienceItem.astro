@@ -39,26 +39,23 @@ const isCurrent = !endDateTime;
 
 {
   isCurrent ? (
-    <span
-      class="absolute -inset-s-1.5 mt-[0.65rem] flex size-3"
-      aria-hidden="true"
-    >
+    <span class="absolute -inset-s-1.5 mt-px flex size-3" aria-hidden="true">
       <span class="absolute inline-flex size-full animate-ping rounded-full bg-gray-700 opacity-75 motion-reduce:hidden" />
       <span class="relative inline-flex size-3 rounded-full border border-gray-900 bg-gray-700" />
     </span>
   ) : (
     <div
-      class="absolute w-3 h-3 rounded-full mt-[0.65rem] -inset-s-1.5 border border-gray-900 bg-gray-700"
+      class="absolute w-3 h-3 rounded-full mt-px -inset-s-1.5 border border-gray-900 bg-gray-700"
       aria-hidden="true"
     />
   )
 }
-<span class="mb-1 text-sm font-normal leading-none text-gray-500">
+<p class="text-sm leading-none text-gray-500 tabular-nums">
   <time datetime={startDateTime}>{startDate}</time>
   {" – "}
   {endDateTime ? <time datetime={endDateTime}>{endDate}</time> : endDate}
-</span>
-<h3 class="mt-2 text-lg font-semibold">{title}</h3>
+</p>
+<h3 class="mt-2 text-lg font-semibold text-balance">{title}</h3>
 <p class="text-sm text-gray-600">{company}, {location}</p>
 {
   typeof description === "string" ? (
