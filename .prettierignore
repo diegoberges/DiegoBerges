@@ -1,2 +1,7 @@
 pnpm-lock.yaml
 .agents
+
+# Local Impeccable reports and cache (gitignored)
+.impeccable/audit/
+.impeccable/critique/
+.impeccable/hook.cache.json
