@@ -177,6 +177,14 @@ These are the page's only exits, to LinkedIn and GitHub. They are discreet and t
 - **Focus:** a 2px ink outline offset by 2px on `:focus-visible`.
 - **Behavior:** they open in a new tab (`target="_blank"`, `rel="noopener noreferrer"`).
 
+### Not-found Page (404)
+
+Centred vertically in the viewport. A large decorative "404" in ink (700, `clamp(6rem, 24vw, 11rem)`, tracking -0.04em, hidden from assistive tech), then the h1 at Display size ("Esta página no existe.") and one Lead line in first person. Below, a two-step timeline borrowed from the experience component: "Estás aquí" with the requested path (filled in client-side) on a hollow pulsing marker, a dashed slate-faint line, and "Inicio" with a link to diegoberges.com on a solid marker. It ends on one row of pills: "Volver al inicio" (Label at 600, no icon), LinkedIn and GitHub. No error-code label above the heading, no illustration.
+
+### Social Preview Image
+
+`public/og.png`, 1200×630: the name in Onest 700 on paper, one slate-strong line with the role, specialism, years and city, and the domain beside a timeline marker. It follows the same monochrome rules as the page.
+
 ### Technology Tags (Chips)
 
 These are small, quiet labels that show the stack for each role.

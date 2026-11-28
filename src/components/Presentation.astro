@@ -1,7 +1,5 @@
 ---
-import Github from "./icons/Github.astro";
-import LinkedIn from "./icons/LinkedIn.astro";
-import SocialPill from "./shared/SocialPill.astro";
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <h1 class="text-3xl font-bold">Hola, soy Diego Berges.</h1>
@@ -10,12 +8,4 @@ import SocialPill from "./shared/SocialPill.astro";
   aplicaciones web.
 </p>
 
-<nav aria-label="Redes sociales" class="mt-6 flex flex-wrap gap-2">
-  <SocialPill href="https://www.linkedin.com/in/diegoberges/">
-    <LinkedIn class="size-5" aria-hidden="true" /> LinkedIn
-  </SocialPill>
-
-  <SocialPill href="https://github.com/diegoberges">
-    <Github class="size-5" aria-hidden="true" /> GitHub
-  </SocialPill>
-</nav>
+<SocialLinks class="mt-6" />

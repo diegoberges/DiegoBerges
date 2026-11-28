@@ -14,7 +14,7 @@ interface Props {
   /** Machine-readable start, e.g. "2022-04" */
   startDateTime: string;
   endDate: string;
-  /** Machine-readable end; omit for the current role */
+  /** Machine-readable end; omit it to mark the current role */
   endDateTime?: string;
   description: string | DetailedDescription;
   tags: {
@@ -34,7 +34,7 @@ const {
   description,
   tags,
 } = Astro.props;
-const isCurrent = endDate === "Actualmente";
+const isCurrent = !endDateTime;
 ---
 
 {
