@@ -106,10 +106,10 @@ A neutral palette with a slight blue tint (Tailwind 4's cool `gray` scale) on pu
 - **Papel** (paper): the background of the whole page. It is the only surface; no layer sits above it.
 - **Tinta** (ink): the main text, covering the h1, role titles and the base text of social pills. The bio uses the same ink at 80% opacity.
 - **Tinta de Titular** (ink-heading): section headings such as "Experiencia" (Flowbite's `text-heading` token). Almost black with a blue undertone.
-- **Pizarra Fuerte** (slate-strong): the fill of the timeline markers. Their border is ink-heading.
-- **Pizarra** (slate): the text of technology tags.
-- **Pizarra Apagada** (slate-muted): description text, achievement bullets and date ranges. This is the voice for secondary reading.
-- **Pizarra Tenue** (slate-faint): the company and location under each role, and the vertical timeline line. It is the quietest level.
+- **Pizarra Fuerte** (slate-strong): the summary sentence of each role, the second reading level after the title. It also fills the timeline markers, whose border is ink-heading.
+- **Pizarra** (slate): the company and location under each role, and the text of technology tags.
+- **Pizarra Apagada** (slate-muted): achievement bullets and date ranges. This is the voice for secondary reading.
+- **Pizarra Tenue** (slate-faint): the vertical timeline line and the bullet markers. It is decoration only, never text.
 - **Bruma Borde** (mist-border): the outline of technology tags.
 - **Bruma** (mist): the background of technology tags.
 
@@ -119,7 +119,7 @@ Social pills do not use tokens from the scale. They use black with alpha: a 5% f
 
 **The One Accent Rule.** The system will accept a single brand colour in the future, and only one. Until it is defined, no element adds colour of its own. The technology logos are the only exception, because their colour belongs to the brand they represent and not to the site.
 
-**The Grey Hierarchy Rule.** Importance drops in this order: ink, then slate-muted, then slate-faint. Never skip a step to make something stand out; to stand out, use more weight or size, not a darker grey.
+**The Grey Hierarchy Rule.** Importance drops in this order: ink, then slate-strong, then slate, then slate-muted. Slate-faint is never used for text. Never skip a step to make something stand out; to stand out, use more weight or size, not a darker grey.
 
 ## Typography
 
@@ -136,7 +136,7 @@ Onest is declared on `html` and overrides the default Flowbite stack (Inter), wh
 - **Headline** (700, 1.5rem): section headings ("Experiencia"), with 40px of space above and 20px below.
 - **Lead** (400, 1.25rem, line height 1.6): the base size of `<main>` and the bio under the greeting (at 80% opacity).
 - **Title** (600, 1.125rem): the role name in each timeline entry.
-- **Body** (400, 1rem): the role summary and achievement bullets, with `text-wrap: pretty`.
+- **Body** (400, 1rem): the role summary (slate-strong) and achievement bullets (slate-muted), with `text-wrap: pretty`. Capped at `56ch`, about 75 characters of Onest text, because `ch` measures the wide zero.
 - **Label** (400, 0.875rem): dates, company and location, and the social pills.
 - **Tag** (600, 0.75rem): the technology tags.
 
@@ -190,8 +190,8 @@ This is the spine of the page. It is an ordered list with a thin vertical line i
 
 1. The date range (Label, slate-muted).
 2. The role title (Title, ink).
-3. The company and location (Label, slate-faint).
-4. A summary and achievement bullets (Body, slate-muted, outside discs).
+3. The company and location (Label, slate).
+4. A summary (Body, slate-strong) and achievement bullets (Body, slate-muted, outside discs in slate-faint), both capped at 56ch.
 5. The technology tags.
 
 The marker for past roles is a 12px circle in slate-strong with an ink-heading border. The **current role** adds a halo using `animate-ping` at 75% opacity, hidden under `prefers-reduced-motion`. It is the only movement on the page.
@@ -201,7 +201,7 @@ The marker for past roles is a 12px circle in slate-strong with an ink-heading b
 ### Do:
 
 - **Do** keep the 800px column with its `max-w-[calc(100%-2rem)]` cap. Without it, mobile loses its gutters.
-- **Do** build hierarchy with weight (400, 600 and 700) and the grey order ink, then slate-muted, then slate-faint.
+- **Do** build hierarchy with weight (400, 600 and 700) and the grey order ink, then slate-strong, then slate, then slate-muted.
 - **Do** use the full pill (9999px) for any new link or label element.
 - **Do** keep motion limited to the current-role marker and hide it under `prefers-reduced-motion`.
 - **Do** introduce a single brand accent, and only one, when it is defined, and use it sparingly.
@@ -212,4 +212,4 @@ The marker for past roles is a 12px circle in slate-strong with an ink-heading b
 - **Don't** add a second typeface or use Inter (the Flowbite default).
 - **Don't** add decorative colour before the accent is defined. Only technology logos carry colour.
 - **Don't** use blue Flowbite components (such as the unused `Badge`) as if they belonged to the system.
-- **Don't** use slate-faint for new text that has to be read. It is reserved for the company line and the timeline line, because its contrast against white is low.
+- **Don't** use slate-faint for text. Its contrast against white is 2.6:1; it is reserved for the timeline line and bullet markers.

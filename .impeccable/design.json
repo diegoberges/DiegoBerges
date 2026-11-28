@@ -208,7 +208,7 @@
       "refersTo": "timeline-dot",
       "description": "Entrada de la línea de tiempo; el puesto actual lleva halo pulsante.",
       "html": "<ol class=\"ds-timeline\"><li class=\"ds-timeline-item\"><span class=\"ds-timeline-dot ds-current\"></span><time class=\"ds-timeline-date\">Abril 2022 - Actualmente</time><h3 class=\"ds-timeline-title\">Analista Programador Angular</h3><p class=\"ds-timeline-org\">Grupo Oesía, Zaragoza</p><p class=\"ds-timeline-body\">Lidero el desarrollo frontend en Angular 20+ para proyectos de administración pública.</p></li></ol>",
-      "css": ".ds-timeline{position:relative;list-style:none;margin:0;padding:0;border-inline-start:1px solid #99a1af;font-family:'Onest Variable',sans-serif;}.ds-timeline-item{position:relative;margin:0 0 40px 16px;}.ds-timeline-dot{position:absolute;inset-inline-start:-22.5px;top:0.65rem;width:12px;height:12px;border-radius:9999px;background:#364153;border:1px solid #101828;}.ds-current::after{content:'';position:absolute;inset:-1px;border-radius:9999px;background:#364153;opacity:.75;animation:ds-ping 1s cubic-bezier(0,0,0.2,1) infinite;}@keyframes ds-ping{75%,100%{transform:scale(2);opacity:0}}@media (prefers-reduced-motion:reduce){.ds-current::after{display:none}}.ds-timeline-date{display:block;font-size:0.875rem;line-height:1;color:#6a7282;}.ds-timeline-title{margin:8px 0 0;font-size:1.125rem;font-weight:600;color:#000;}.ds-timeline-org{margin:0;font-size:0.875rem;color:#99a1af;}.ds-timeline-body{margin:8px 0 16px;font-size:1rem;line-height:1.5;color:#6a7282;text-wrap:pretty;}"
+      "css": ".ds-timeline{position:relative;list-style:none;margin:0;padding:0;border-inline-start:1px solid #99a1af;font-family:'Onest Variable',sans-serif;}.ds-timeline-item{position:relative;margin:0 0 40px 16px;}.ds-timeline-dot{position:absolute;inset-inline-start:-22.5px;top:0.65rem;width:12px;height:12px;border-radius:9999px;background:#364153;border:1px solid #101828;}.ds-current::after{content:'';position:absolute;inset:-1px;border-radius:9999px;background:#364153;opacity:.75;animation:ds-ping 1s cubic-bezier(0,0,0.2,1) infinite;}@keyframes ds-ping{75%,100%{transform:scale(2);opacity:0}}@media (prefers-reduced-motion:reduce){.ds-current::after{display:none}}.ds-timeline-date{display:block;font-size:0.875rem;line-height:1;color:#6a7282;}.ds-timeline-title{margin:8px 0 0;font-size:1.125rem;font-weight:600;color:#000;}.ds-timeline-org{margin:0;font-size:0.875rem;color:#4a5565;}.ds-timeline-body{margin:8px 0 16px;max-width:56ch;font-size:1rem;line-height:1.5;color:#364153;text-wrap:pretty;}"
     },
     {
       "name": "Section Heading",
@@ -238,7 +238,7 @@
       },
       {
         "name": "The Grey Hierarchy Rule",
-        "body": "La importancia baja en este orden: tinta, pizarra apagada, pizarra tenue. Nunca saltes un escalón para destacar algo; para destacar se usa más peso o más tamaño, no un gris más oscuro.",
+        "body": "La importancia baja en este orden: tinta, pizarra fuerte, pizarra, pizarra apagada. La pizarra tenue nunca se usa para texto. Para destacar se usa más peso o más tamaño, no un gris más oscuro.",
         "section": "colors"
       },
       {
@@ -254,7 +254,7 @@
     ],
     "dos": [
       "Do mantener la columna de 800px con su tope max-w-[calc(100%-2rem)]; sin él, el móvil pierde los márgenes.",
-      "Do construir jerarquía con peso (400/600/700) y el orden de grises tinta → pizarra apagada → pizarra tenue.",
+      "Do construir jerarquía con peso (400/600/700) y el orden de grises tinta → pizarra fuerte → pizarra → pizarra apagada.",
       "Do usar la píldora completa (9999px) para cualquier nuevo elemento de enlace o etiqueta.",
       "Do limitar el movimiento al marcador del puesto actual y respetar prefers-reduced-motion.",
       "Do introducir un único acento de marca, y solo uno, cuando se defina; usarlo con moderación."
@@ -264,7 +264,7 @@
       "Don't introducir una segunda tipografía ni usar Inter (el defecto de Flowbite).",
       "Don't añadir color decorativo antes de definir el acento; solo los logos de tecnología llevan color.",
       "Don't usar componentes azules de Flowbite (como el Badge sin uso) como si fueran parte del sistema.",
-      "Don't usar pizarra tenue para texto nuevo que deba leerse: queda reservada a empresa/ubicación y a la línea de tiempo, porque su contraste sobre blanco es bajo."
+      "Don't usar pizarra tenue para texto: su contraste sobre blanco es 2,6:1; queda reservada a la línea de tiempo y los marcadores de viñeta."
     ]
   }
 }

@@ -59,17 +59,17 @@ const isCurrent = endDate === "Actualmente";
   {endDateTime ? <time datetime={endDateTime}>{endDate}</time> : endDate}
 </span>
 <h3 class="mt-2 text-lg font-semibold">{title}</h3>
-<p class="text-sm text-gray-500">{company}, {location}</p>
+<p class="text-sm text-gray-600">{company}, {location}</p>
 {
   typeof description === "string" ? (
-    <p class="mb-4 mt-2 text-base font-normal text-gray-500 text-pretty">
+    <p class="mb-4 mt-2 max-w-[56ch] text-base font-normal text-gray-700 text-pretty">
       {description}
     </p>
   ) : (
-    <div class="mb-4 mt-2 text-base font-normal text-gray-500 text-pretty">
-      <p>{description.summary}</p>
+    <div class="mb-4 mt-2 max-w-[56ch] text-base font-normal text-pretty">
+      <p class="text-gray-700">{description.summary}</p>
       {description.bullets && (
-        <ul class="mt-2 list-outside list-disc space-y-1 ps-5">
+        <ul class="mt-2 list-outside list-disc space-y-1 ps-5 text-gray-500 marker:text-gray-400">
           {description.bullets.map((bullet) => (
             <li>{bullet}</li>
           ))}
